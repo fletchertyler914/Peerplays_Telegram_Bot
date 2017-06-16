@@ -1,8 +1,8 @@
 'use strict';
 
 const Telegram = require('telegram-node-bot');
-var { Api } = require("./lib");
-let wsString = "wss://bitshares.openledger.info/ws";
+//var { Api } = require("./lib");
+//let wsString = "wss://bitshares.openledger.info/ws";
 
 class WitnessController extends Telegram.TelegramBaseController {
     infoHandler($) {
@@ -12,13 +12,13 @@ class WitnessController extends Telegram.TelegramBaseController {
         let successful_blocks = 100;
 
 
-        Api.instance(wsString, true).init_promise.then((res) => {
-            console.log(res);
+//        Api.instance(wsString, true).init_promise.then((res) => {
+//            console.log(res);
 
-            function updateObject() {
-                Api.instance().db_api().exec( "get_objects", [ ["2.1.0"] ] ).then(response => {
-                    console.log("Successfully connected to the Openledger API");
-                    console.log("get_object", response);
+//            function updateObject() {
+//                Api.instance().db_api().exec( "get_objects", [ ["2.1.0"] ] ).then(response => {
+//                    console.log("Successfully connected to the Openledger API");
+//                    console.log("get_object", response);
 
 //                    for (var key in response[0]) {
 //                        if (!document.getElementById("td_" + key)) {
@@ -37,16 +37,16 @@ class WitnessController extends Telegram.TelegramBaseController {
 //                            definitionTd.innerText = response[0][key];
 //                        }
 //                    }
-                })
-            }
+//                })
+//            }
 
-            updateObject();
-            setInterval(updateObject, 3000);
-        });
+//            updateObject();
+//            setInterval(updateObject, 3000);
+//        });
 
-        function updateListener(object) {
-            console.log("set_subscribe_callback update:\n", object);
-        }
+//        function updateListener(object) {
+//            console.log("set_subscribe_callback update:\n", object);
+//        }
 
 
 
