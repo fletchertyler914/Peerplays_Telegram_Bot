@@ -1,0 +1,19 @@
+{
+  "name": "telegram-peerplays-bot",
+  "version": "1.0.0",
+  "description": "Telegram Peerplays Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": ["peerplays", "nodejs", "telegram", "todo"],
+  "author": {
+    "name": "Tyler Fletcher",
+    "url": ""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "telegram-node-bot": "^4.0.3"
+  }
+}
